@@ -13,6 +13,6 @@
   * [x] 입력된 값이 전부 숫자가 아니면 IllegalArgumentException
   * [x] 입력된 값이 3자리가 아니면 IllegalArgumentException 
 * [x] 사용자 입력 분석하여 결과 생성
-* [ ] 결과 출력
+* [x] 결과 출력
 * [ ] 게임 재시작 기능
 * [ ] 게임 완전 종료 기능
