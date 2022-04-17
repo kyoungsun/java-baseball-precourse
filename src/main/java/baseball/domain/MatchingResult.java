@@ -25,21 +25,19 @@ public class MatchingResult {
         return balls;
     }
 
+    // TODO: refactoring
     @Override
     public String toString() {
         if (isNothing()) {
             return "낫싱";
         }
-
         StringBuffer sb = new StringBuffer();
-        if (strikes != 0) {
-            sb.append(String.format("%d스트라이크 ", strikes));
-        }
-
         if (balls != 0) {
-            sb.append(String.format("%d볼", balls));
+            sb.append(String.format("%d볼 ", balls));
         }
-
+        if (strikes != 0) {
+            sb.append(String.format("%d스트라이크", strikes));
+        }
         return sb.toString().trim();
     }
 }
