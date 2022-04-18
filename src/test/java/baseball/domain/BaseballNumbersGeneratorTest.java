@@ -10,7 +10,8 @@ class BaseballNumbersGeneratorTest {
     @DisplayName("3자리 숫자를 생성합니다.")
     @Test
     void testGenerate() {
-        BaseballNumbers baseballNumbers = RandomBaseballNumbersGenerator.generate();
+        RandomBaseballNumbersGenerator generator = new RandomBaseballNumbersGenerator();
+        BaseballNumbers baseballNumbers = generator.generate();
         assertThat(baseballNumbers.getNumbers().size()).isEqualTo(BaseballNumbers.NUMBERS_SIZE);
     }
 }
