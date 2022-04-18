@@ -60,15 +60,22 @@ public class BaseballGameConsole {
 
     private String createResultMessage(MatchingResult matchingResult) {
         StringBuffer sb = new StringBuffer();
+        addBalls(matchingResult, sb);
+        addStrikes(matchingResult, sb);
+
+        return sb.toString().trim();
+    }
+
+    private void addBalls(MatchingResult matchingResult, StringBuffer sb) {
         if (matchingResult.getBalls() != 0) {
             sb.append(String.format("%d볼 ", matchingResult.getBalls()));
         }
+    }
 
+    private void addStrikes(MatchingResult matchingResult, StringBuffer sb) {
         if (matchingResult.getStrikes() != 0) {
             sb.append(String.format("%d스트라이크", matchingResult.getStrikes()));
         }
-
-        return sb.toString().trim();
     }
 
     public void printGameEndMessage() {
